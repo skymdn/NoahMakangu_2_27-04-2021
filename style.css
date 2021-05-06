@@ -1,0 +1,861 @@
+body /* corps de la page avec la largeur, les marges et les polices de la page */
+{
+    font-family: 'Raleway', serif; /* police de la page */
+    width: auto; /* largeur auto pour que la page soit responsive sinon sans delicat pour l_etre */
+    margin:auto;
+    margin-left: 10px; /* marge special pour le cote gauche de la page */
+}
+
+/* Header */
+
+/* Partie haute du header*/ 
+
+#top_header 
+{
+    display: flex; /* flexbox pour que les element soit alignes */
+    justify-content: space-between; /* S-B pour que logo et nav soit de chaque cotes avec espace */
+    margin-top: 15px; /* marge speciale en haut pour que la partie soit un peu plus basse */ 
+}
+
+/* Navigation */
+
+nav
+{
+    display:flex; /* pour que les element ne soient pas en colonne */
+    width: 35%; /* 35 % pour mettre de l'espace entre les 3 parties */
+    font-size: 1.2em; /* la taille des textes nav*/
+    justify-content: space-around; /* pour les espace entre eux et extremiter associer avec width */
+    align-items: flex-end; /* alignement pour que nav soit a hauteur du logo */
+}
+nav a
+{
+    display: flex; /* pour que ils soient bien centre avec logo combiner avec le flex du nav */
+    align-items: flex-end; /* pour que les element ne soient pas trop haut combiner avec flex-end du nav */
+    color: black; /* pour que cela n'est pas un aspect de lien au visuel */
+    padding-bottom: 10px; /* marge pour que le teste soit centrer combiner avec les margins et align-items et que le boite soit plus haute pour la barre bleu combiner avec height */
+    text-decoration: none; /* pour enlever la barre sous le texte des liens combiner avec color */
+    height: 100%; /* pour que la barre bleu soit tout en haut de la boite */
+}
+nav a:hover
+{
+    color: #0065FC; /* que le texte soit en bleu quand la souris survol */
+    border-top: 2px solid #0065FC; /* que il est ait une barre bleu solide de 2 px d'epaisseur en haut de la boite quand la souris survol */
+    
+}
+#subscription
+{
+    color: #0065FC; /* "s'inscrire" soit en bleu */
+    font-weight: bold; /* le texte soit en gras */
+    border-top: transparent; /* la barrre soit transparente au survol */
+}
+
+/* Partie recherche du header */
+
+#research_container
+{
+    padding-top: 1.5em; /* un espace suffisant avec div top_header sinon trop haut */
+}
+h1
+{
+    font-size: 20px; /* titre soit diminuer de sa taille par defaut */
+    font-weight: bold;/* titre en gras */
+}
+#research_box
+{
+    display: flex; /* les trois element soit coller entre eux */
+    align-items: center; /* combiner avec flex pour qu'ils soient tous centrer donc a la meme taille */
+    margin-bottom:30px ; /* pour une marge donc espace avec first_section */
+}
+#research_box i
+{
+    background-color: #F2F2F2; /* fond gris pour l'icone map_marker */
+    border-top-left-radius: 15px; /* metttre un arrondi en haut et bas a gauche */
+    border-bottom-left-radius: 15px;
+    padding: 15px; /* la marge interieur soit plus haute donc aligne bien avec le reste */
+}
+#research
+{
+    border: 2px solid #F2F2F2; /* la bordure de la boite soit de 2px solide est en gris */
+    padding: 1em; /* la marge fait que cela est la bonne taille sinon trop petit */
+    font-weight: bold; /* le text soit en gras */
+}
+.submit
+{
+    padding: 12px; /* la marge interieur soit plus grande sion trop petit et pas aligner */
+    font-size: 12px; /* la taille soit plus petite pour laiser de l'espace aux filtres */
+    background-color: #0065FC; /* couleur de fond en bleu */
+    color: white; /* couleur du texte en blanc */
+    border-top-right-radius: 15px; /* creer une bordure arrondie en haut et bas a gauche */ 
+    border-bottom-right-radius: 15px;
+    border: none; /* pour faire disparaitre la bordure et enlever le gris */
+    width: 10em; /* largeur plus grande */
+}
+.cancel_icon
+{
+    opacity: 0; /* faire disparaitre l'icone search sur version ordinateur */
+}
+
+/*Premiere section de la page*/
+
+/* Partie des filtres de la section */
+
+#filter_container
+{
+    display: flex; /* mettre sur la meme ligne le titre et les filtres */
+    align-items: center; /* centrer le titre surtout pour la version tablette */
+}
+#filter_title
+{
+    padding-right: 2em; /*marge interieur pour de l'espace à droite avec les filtres */
+    font-weight: bold; /* mettre en gras */
+    font-size: 18px; /* reduire la taille */
+}
+#filters
+{
+    display: flex; /* mettre les filtres en ligne pas colonne */
+    flex-wrap: wrap; /* les filtres aillent a la ligne en responsive */
+}
+.filters_box
+{
+    display: flex; /* flexbox pour que les les liens et paragraphe rentre dans les boites et soit aligner sur la meme ligne */
+    align-items: center; /* que il soit centrer */
+    margin-right: 2em; /* mettre de l'espace entre les filtres boites avec marge exterieur */
+    border:2px solid #F2F2F2; /* une bordure solide en gris pour qu'elle soit visible */
+    border-radius: 30px; /* arrondir les bordure nottament la droite */
+    height:2.5em; /* reduire la taille */
+    font-weight: bold; /* les textes en gras */
+}
+#filters i
+{
+    background-color:#DEEBFF; /* la couleur de fond des boite icones soit en bleu claire */
+    padding: 0.8em; /* agrandir la marge pour faire un carre plus grand */
+    border-radius: 30px; /* faire un cercle combiner avec padding */
+    color:#0065FC; /* couleur des icones soit en bleu foncer */
+}
+.filters_box a
+{
+    text-decoration: none; /* enlrver la barre en dessous */
+    padding-right: 1em; /* agrandir les marge a gauche et droite */
+    padding-left: 1em;
+    color: black; /* texte en noir */
+}
+#filters :hover
+{
+    color: orange; /* couleur en orange du texte lors de survol */
+    background-color: #e2ffde; /* fond en vert claire lors du survol car pas de precision client */
+}
+
+
+/* Partie info-bulle de la section */
+
+#information_container
+{
+    display: flex; /* mettre a coter le texte et icone */
+    align-items: center; /* aligner icone et texte */
+    margin-top: 2em; /* marge suffisante avec les filtres en haut */
+}
+#information
+{
+    padding-top: 0.5em;/* alignement (centrage) en haut et droite de l'icone */
+    padding-right: 1em;
+    width: 30px; /* largeur de 30px */
+    height: 30px; /* hauteur de 30px */
+}
+#information .fas
+{
+    padding: 2px; /* marge interieur carre plus grand */
+    text-align: center; /* alignement entre carre et icone */
+    color: #0065FC; /* couleur icone en bleu */
+    font-size: 14px; /* taille plus petite */
+}
+#information_container i
+{
+    border: 2px solid #F2F2F2; /* bordure solide en fond gris */
+    border-radius: 20px; /* arrondi donc cercle */
+    width: 1em; /* largeur du cercle grand */
+}
+
+/*Deuxieme section de la page*/
+
+#second_section
+{
+    display: flex; /* aligner hebergement et populaire */
+}
+
+/* Partie hebergements de la section */
+
+.location
+{
+    width: 65%; /* largeur de 65% de la page */
+    padding: 1em; /* permet de centrer les boites */
+    background-color: #F2F2F2; /* couleur de fond en gris */
+    border-radius: 15px; /* bordure arrondi sur les quatre coins de la boite */
+}
+#first_line
+{
+    display: flex; /* aligne les trois boites */
+}
+#second_line
+{
+    display: flex; /* idem */
+}
+.location_box
+{
+    background-color: white; /* couleur de fond en blanc */
+    width: 35%; /* largeur boites 35% */
+    box-shadow: 3px 4px 3px 1px rgb(212, 209, 209); /* ombres plus marquer en bas et a droite couleur gris claire */
+    border-radius: 15px;  /* arrondi des quatre coins */
+    padding: 3px; /* marge pour laiser visible les cotes des boites */
+    margin: 1em; /* laiser un espace entre toutes les boites */
+}
+.location_box a
+{
+    text-decoration: none; /* enlever les barre des textes en dessous */
+}
+.location_box p
+{
+    color: black; /* couleur en noir pour p donc plus en bleu */
+    font-size: 15px; /* taille plus grande */
+}
+.location_box img
+{
+    width: 100%; /* toutes les image prennent toute la largeur */
+    height: 115px; /* toutes a une taille suffisante */
+    object-fit: cover; /* les images ne soient pas ecraser */
+    border-top-left-radius: 15px; /* arrondie en haut a gauche et droite */
+    border-top-right-radius: 15px;
+
+}
+.location_box h3
+{
+    font-weight: bold; /* texte en gras */
+    font-size: 17px; /* taille plus petite */
+    padding-left: 15px; /* marge a gauche */
+    color: black; /* texte en noir */
+}
+.text_location
+{
+    font-size: 12px; /* taille plus petite pour etoiles */
+    padding-left: 15px; /* marge en bas et a gauche pour etoile et p */
+    padding-bottom: 5px;
+    color: #0065FC; /* couleur en bleu etoiles et texte */
+}
+.empty_star
+{
+    color: rgb(185, 185, 185); /* couleur en gris pour etoile vide */
+}
+#show_more
+{
+    font-weight: bold; /* texte en gras */
+    padding-top: 50px; /* placer plus en bas de la boite */
+    font-size: 20px; /* taille plus petite */
+}
+
+/* Partie populaire de la section */
+
+aside
+{
+    display: flex; /* element a coter puis en colonne surtout pour responsive */
+    flex-direction: column;
+    background-color: #F2F2F2; /* image de fond gris */
+    margin-left: 1em; /* espace avec hebergement */
+    border-radius: 15px; /* arrondie des quatre coins */
+    width: 34%; /* taille restante par rapport a hebergement */
+}
+aside p
+{
+    color: black; /* couleur en noir pour p donc plus en bleu */
+    font-size: 15px; /* taille plus grande */
+}
+
+#popular
+{
+    display: flex; /* aligner titre et icone */
+    justify-content: space-between; /* espace entre les deux */
+    align-items: center; /* centrer les element surtout icone */
+    margin: 0.5em; /* permet de centrer les boites, titre et icone avec padding */
+    padding: 1em 1.5em 0em 1.5em;
+}
+#popular_container
+{
+    display: flex; /* aligne les elements en ligne */
+    flex-direction: column;/* les met en colonne */
+    align-items: center; /* centre les element au milieu */
+    padding: 0em 2em; /* met de l'espace a gauche et droite */
+}
+.popular_box
+{
+    display: flex; /* aligne les element */
+    background-color: white; /* fond en blanc */
+    box-shadow: 3px 4px 3px 1px rgb(212, 209, 209); /* creer des ombres a la boite surout en bas et aa droite */
+    border-radius: 15px; /* arrondie aux quatre coins */
+    padding: 3px; /* permet de laisser un petit espace avec l'image */
+    margin: 0em 3em 3em 3em; /* laisse de l'espace (marge) entre les trois boites */
+    height: 170px; /* agrandi les boites */
+    width: 100%; /* permet de prendre 100% de la place en largeur donc agrandi les boites */
+}
+.popular_box a
+{
+    display: -webkit-inline-flex; /* rends mes elements flexible sur une ligne donc place le <p>,titre et etoiles a droite, l'image a gauche */
+    text-decoration: none; /* enleve les barre de liens en dessous des textes et etoiles */
+}
+.popular_box img
+{
+    width: 40%; /* les images prennent 40% de largeur des boites */
+    border-top-left-radius: 15px; /* creer des arrondis en haut et bas a gauche de l'image */
+    border-bottom-left-radius: 15px;
+    object-fit: cover; /* les images ne sont pas ecraser */
+}
+.popular_title
+{
+    display: flex; /* rend mon element flex surtout pour la version smartphone mais du coup separe mon titre du p et etoiles */
+    flex-direction: column; /* rement le titre,p et etoiles en colonne */
+    justify-content: space-between; /* met un espace entre p etoiles avec le titre surtout pour smartphone */
+    height: 150px; /* place vers le haut p et etoile pour les rapprocher du titre */
+    width: 100%; /* prend 100% de la largeur disponible et aligne du coup les images, textes et etoiles */
+    padding-left: 1em; /* laisse un peu d'espace à gauche par rapport a l'image */
+}
+.popular_title h3
+{
+    font-size: 18px; /* reduit la taille du titre */
+    margin-bottom: 0px; /* reduit la marge au maximum en bas entre le titre et le reste */
+    color: black; /* couleur en noir */
+    font-weight: bold; /* titre en gras */
+    margin-top: 3px; /* permet de remonter vers le haut le titre donc les element avec */
+}
+.star_box
+{
+    font-size: 12px; /* reduit la taille des etoiles */
+}
+.popular_title p
+{
+    margin-bottom: 55px; /* permet de remonter juste le paragraphe vers le haut */
+    /* herite egalement de la couleur noir et taille 15px de aside p */
+}
+.star
+{
+    color: #0065FC; /* met couleur des etoiles en bleu */
+}
+
+/* Troisieme section de la page */
+
+.activity
+{
+    display: flex; /* met les images en ligne avec le titre */
+    flex-direction: column; /* place les images en dessous du titre */
+    margin-top: 4em; /* met une marge avec la section du haut */
+    
+}
+#activity_container
+{
+    display: flex; /* met les deux blocs cote a cote */
+    justify-content: space-between;  /* met les de bloc le plus espacer possible */
+    
+}
+.activity_box
+{
+    display: flex; /* met les deux petits blocs en ligne avec les deux gros */
+    width: 50%; /* met 50% de largeur pour chaque blocs principal donc 100% a deux */
+    
+}
+#vieux_port_box, #parc_national_box
+{
+    width: 50%; /* prend 50% de l largeur donc 25% par grosse boite */
+}
+#first_column
+{
+    width: 50%; /* met 50% de largeur avec le plus gros bloc donc 25% en tout de la page */
+    margin-left: 2em; /* permet une marge (espace) a droite et gauche avec les deux gros blocs de chaque cote */ 
+    margin-right: 2em;
+    display: flex; /* permet de mettre de haut en bas et aligner les deux blocs petits entre eux combiner avec column et space between */
+    flex-direction: column; /* les met en colonne */
+    justify-content: space-between; /* le max d'espace entre eux */
+}
+#second_column
+{
+    display: flex; /* ouvre le flexbox */
+    flex-direction: column; /* met en colonne */
+    justify-content: space-between; /* met le max d'espace entre eux */
+    width: 50%; /* prend 50% de largeur avec la grosse boite donc 25% en tout de la page */
+    margin-left: 2em; /* met une marge(espace) avec la grosse boite a gauche */
+}
+#activity_container img
+{
+    width: 100%; /* prend 100% de la largeur dans les boites les deux grosse */
+    height: 500px; /* agrandi les images des deux grosse boites */
+    object-fit: cover; /* permet de ne pas ecraser les images */
+    border-radius: 15px 15px 0px 0px; /* met des arrondi en haut des images toutes les images */
+}
+#fort_pomegues_box img
+{
+    height: 230px; /* reduit la taille de l'image */
+    margin-bottom: 2em; /* met une marge en bas de l'image permet de reduire la boite pour une coherence en responsive */ 
+}
+#iles_frioul_box img
+{
+    height: 140px; /* reduit la taille de l'image */
+}
+#second_column img
+{
+    height: 185px; /* reduit la taille des images de la deuxieme colonne */
+}
+#fort_pomegues_box, #iles_frioul_box, #vieux_port_box, #parc_national_box, #notre-dame_box, #parc_longchamp_box
+{
+    box-shadow: 1px 1px 2px rgb(190, 189, 189); /* met une ombres gris aux boites surtout en bas et a droite */
+    border-radius: 15px; /* arrondi les quatre coins des boites */
+    padding-bottom: 0.5em; /* marge interieur qui agrandi un peu le bas des boites */
+}
+.activity a
+{
+    text-decoration: none; /* enleve la ligne de liens en dessous des texte */
+}
+#fort_pomegues_box a
+{
+    font-size: 4px; /* ajuste la taille du lien donc de la boite utile surtout en responsive */
+}
+.activity h3
+{
+    color: black; /* la couleur en noir */
+    font-weight: bold; /* titre en gras */
+}
+#activity_container h3
+{
+    padding-left: 10px; /* met les titre plus centrer vers la droite */
+    font-size: 14px; /* reduit la taille des textes */
+}
+#parc_longchamp_box
+{
+    margin-top: 2em; /* met une marge (espace) avec notre dame en version smartphone */
+}
+#iles_frioul_box
+{
+    
+    margin-top: 2em; /* met une marge (espace) avec fort pomegues */
+}
+
+
+
+/* Pied de page */
+
+
+footer
+{
+    background-color: #F2F2F2; /* couleur de fond en gris */
+    display: flex; /* aligne les element en ligne */
+    margin-top: 2em; /* met de l'espace avec la section en haut activites */
+}
+.footer_box
+{
+    width: 33%; /* taille de chacune des boites en largeur */
+}
+.footer_box ul
+{
+    list-style-type: none; /* efface l'aspect de la liste a puce */
+}
+
+.footer_box li
+{
+    font-size: 18px; /* agrandi les texte */
+    line-height: 30px; /* ajuste la taille entre les espace donne un aspect de grandeur */
+}
+footer h3
+{
+    font-weight: bold; /* titre en gras */
+    line-height: 35px; /* ajuste la taille entre les espace donne un aspect de grandeur */
+}
+
+/* Version tablette*/
+@media screen and (min-width:768px) and (max-width:992px) {
+
+    /* Header de la version tablette */
+
+    /* Partie haute du header version tablette */
+
+    
+    #top_header
+    {
+        display: block; /* me permet de mettre une distance entre hergement, activites avec le haut en ne les mettant pas sur la meme ligne sachant que "sinscrire" sera en absolu position */
+    }
+    #logo
+    {
+        padding: 10px 0px 0px 20px; /* applique une marge interieur qui met pert de centrer le logo vers la gauche et le bas */
+    }
+
+    /* Partie navigation de la version tablette */
+
+    nav
+    {
+        width: 100%; /* permet a hebergement et activites de prendre toute la largeur */
+        margin-top: 40px; /* permet de mettre de l'espace avec le logo et s'inscrire combiner avec display_block */
+    }
+   
+    nav a
+    {
+        width: 50%; /* permet a hebergement et activites de prendre 50% de la ligne "s'inscrire" en position absolu */
+        padding-bottom: 20px; /* permet de mettre de l'espace avec la div research_container */
+        border-bottom: 2px solid #F2F2F2; /* une bordure solide gris en bas du nav */
+        justify-content: center; /* permet de centrer les element */
+        font-size: 1.3em; /* permet d'agrandir les textes */
+    }
+    nav a:hover
+    {
+        color: #0065FC; /* lors du survol couleur bleu sur texte */
+        border-bottom:2px solid #0065fc ; /* barre solide en bleu lors du survol */
+        border-top: none; /* enleve la barre bleu du dessus */
+        
+    }
+    #subscription
+    {
+        position: absolute; /* permet de separer "s'inscrire du reste du nav */
+        top: 35px; /* permet de le remonter vers le haut et la droite */
+        right: 5px;
+        height: 22px; /* evite le debordement */
+        border-bottom: none;/* enleve la barre gris */
+        width: 15%; /* de reduire la largeur du liens donc le placer plus a droite */
+    }
+
+    /* Partie recherche du header version tablette */
+
+    #research_container
+    {
+        margin: 0px 20px 0px 20px; /* met de l'espace sur la gauche et la droite */
+    }
+    #research_title h1
+    {
+        font-size: 1.5em; /* permet d'agrandir la taille du titre */
+    }
+    #research
+    {
+        width: 100%; /* permet a la barre de recherche de prendre toute la ligne en largeur */
+        height: 42px; /* reajuste legerement la barre avec les autres element */
+    }
+    #research_box .fa-search
+    {
+        color: #F2F2F2; /* l' icone en gris */
+        background-color: #0065FC; /* le fond en bleu */
+        border-radius: 0px 15px 15px 0px; /* met arrondi en haut et bas a droite et enleve a gauche */
+    }
+    .submit
+    {
+        display: none; /* enleve le bouton "rechercher" */
+    }
+    .cancel_icon
+    {
+        opacity: 1; /* met en lumiere le bouton icone search */
+    }
+
+    /* Deuxieme section de la page version tablette */
+
+    #second_section
+    {
+        flex-direction: column-reverse; /* permet de mettre en colonne inverser populaire et hebergement */
+    }
+
+    /* Partie populaire de la section version tablette */
+
+    aside
+    {
+        width: 100%; /* permet a la section de prendre toute la largeur */
+        margin: 0px; /* permet de centrer le bloc */
+    }
+    #popular
+    {
+        padding: 0em 1em 1em 1em; /* permet de mieux centrer les element */
+    }
+    #popular_container
+    {
+        flex-direction: initial; /* permet aux element de ne pas deborder */
+        flex-wrap: wrap; /* permet aux element d'aller a la ligne */
+        width: 100%; /* prend toute la largeur */
+        padding: 0px; /* aide a mieux centrer */
+    }
+    .popular_box img
+    {
+        width: 45%; /* augmente la largeur des images pour etre symetrique entre elles */
+        padding-right: 10em; /*decale vers la gauche l'image pour etre symetrique entre elles combiner avec width */
+    }
+    .popular_title p
+    {
+        margin-bottom: 25px; /*rapproche p vers les etoiles*/
+    }
+
+    /* Partie hebergements de la section version tablette */
+
+    .location
+    {
+        width: 100%; /* la section prend toute la largeur */
+        margin-top: 2em; /* met de l'espace avec populaire */
+        padding: 0em; /* centre mieux les element */
+    }
+    .location_box
+    {
+        margin: 1em 1em 0em ; /* permet de centre mieux les element de la ligne 2 avec la 1 */
+    }
+    #show_more
+    {
+        margin-left: 10px; /* decale vers la droite */
+    }
+
+    /* Troisieme section de la page version tablette */
+
+    .activity_box
+    {
+        flex-direction: column; /* met les element en colonne */
+        margin-top: 2em; /* met de l'espace en haut */
+        padding-right: 1em;/* permet de l'espace entre les boites de gauche a droite */
+        padding-left: 1em;
+    }
+    #vieux_port_box, #parc_national_box
+    {
+        width: 100%; /* prend toute la largeur possible */
+    }
+    #first_column, #second_column
+    {
+        width: 100%; /* prend toute la largeur possible */
+        margin-left: 0px; /* permet de centrer les boites */
+    }
+    #fort_pomegues_box
+    {
+        margin-top: 2em; /* met une marge avec vieux port */
+    }
+    #activity_container img
+    {
+        height: 200px;
+    }
+    
+    #notre-dame_box
+    {
+        margin-top: 2em; /* mer une marge avec parc national */
+        height: 16.1em; /* permet d'aligner les element avec la premiere colonne */
+    }
+
+}
+
+/* Version smartphone */
+
+@media screen and (max-width:767px) {
+
+    /* Header version smartphone */
+
+    /* Partie haute du header version smartphone */
+
+    #top_header
+    {
+        display: block; /* me permet de mettre une distance entre hergement, activites avec le haut en ne les mettant pas sur la meme ligne sachant que "sinscrire" sera en absolu position */
+    }
+    #logo
+    {
+        padding: 10px 0px 0px 20px; /* applique une marge interieur qui met pert de centrer le logo vers la gauche et le bas */
+    }
+    
+    /* Partie navigation version smartphone */
+
+    header a
+    {
+        font-size: 1.3em; /* agrandi les texte dans les liens */
+    }
+    nav
+    {
+        width: 100%; /* permet a hebergement et activites de prendre toute la largeur */
+        margin-top: 40px; /* permet de mettre de l'espace avec le logo et s'inscrire combiner avec display_block */
+    }
+   
+    nav a
+    {
+        width: 50%; /* permet a hebergement et activites de prendre 50% de la ligne "s'inscrire" en position absolu */
+        padding-bottom: 20px; /* permet de mettre de l'espace avec la div research_container */
+        border-bottom: 2px solid #F2F2F2; /* une bordure solide gris en bas du nav */
+        justify-content: center; /* permet de centrer les element */
+        font-size: 1.3em; /* permet d'agrandir les textes */
+    }
+    nav a:hover
+    {
+        color: #0065FC; /* lors du survol couleur bleu sur texte */
+        border-bottom:2px solid #0065fc ; /* barre solide en bleu lors du survol */
+        border-top: none; /* enleve la barre bleu du dessus */
+        
+    }
+    #subscription
+    {
+        position: absolute; /* permet de separer "s'inscrire du reste du nav */
+        top: 35px; /* permet de le remonter vers le haut et la droite */
+        right: 15px;
+        height: 22px; /* evite le debordement */
+        border-bottom: none;/* enleve la barre gris */
+        width: 15%; /* de reduire la largeur du liens donc le placer plus a droite */
+    }
+
+    /* Partie recherche du header version smartphone */
+
+    #research_container
+    {
+        margin: 0px 20px 0px 20px; /* met de l'espace sur la gauche et la droite */
+    }
+    #research_title h1
+    {
+        font-size: 1.5em; /* permet d'agrandir la taille du titre */
+    }
+    #research
+    {
+        width: 100%; /* permet a la barre de recherche de prendre toute la ligne en largeur */
+        height: 42px; /* reajuste legerement la barre avec les autres element */
+    }
+    #research_box .fa-search
+    {
+        color: #F2F2F2; /* l' icone en gris */
+        background-color: #0065FC; /* le fond en bleu */
+        border-radius: 0px 15px 15px 0px; /* met arrondi en haut et bas a droite et enleve a gauche */
+    }
+    .submit
+    {
+        display: none; /* enleve le bouton "rechercher" */
+    }
+    .cancel_icon
+    {
+        opacity: 1; /* met en lumiere le bouton icone search */
+    }
+
+    /* Premiere section de la page version smartphone */
+    
+    #first_section
+    {
+        margin-left: 20px; /* met de l'espace a droite et gauche du coup les elements vont a la ligne */
+        margin-right: 20px;
+    }
+    #filter_container
+    {
+        flex-direction: column; /*met les filtres en bas du titre */
+        align-items: initial; /* aligne les element en position initial surtout pour le titre va a gauche */
+    }
+    .filters_box
+    {
+        margin-top: 10px; /* met de l'espace vers le haut entre eux et avec le titre */
+    }
+    .filters_box a
+    {
+        font-size: 1.2em; /* le texte des liens sont agrandi donc permet un retour a la ligne */
+    }
+    
+    /* Deuxieme section de la page version smatphone */
+    #second_section
+    {
+        flex-direction: column-reverse; /* permet de mettre en colonne inverser populaire et hebergement */
+    }
+
+    /* Partie populaire de la section version smartphone */ 
+    aside
+    {
+        border-radius: 0px; /* reduit les arrondis */
+        width: 100%; /* prend toute la largeur possible */
+        margin: 0px; /* permet de centrer */
+    }
+    #popular i
+    {
+        font-size: 20px; /* agrandi la taille de l'icone trend */
+    }
+    #popular h2
+    {
+        font-size: 18px; /* reduit la taille du titre */
+        padding-left: 15px; /* decale vers la droite */
+        font-weight: bold; /* met en gras */
+    }
+    .popular_box
+    {
+        width: 90%; /* prend 90% de la largeur possible donc moins long */
+        margin-bottom: 2em; /* met de l'espace entre les boites */
+    }
+    .popular_title h3 
+    {
+        font-size: 16px; /* reduit la taille du texte */
+    }
+    .star_box p
+    {
+        margin: 0px; /* enleve la marge avec les etoiles donc rapproche p et etoiles */
+    }
+
+    
+    /* Partie hebergements de la section version smartphone */
+
+    .location
+    {
+        width: 100%; /* prend toute la largeur possible */
+        background-color: initial; /* met le fond en blanc car couleur d'origine */
+        padding: 0px; /* centre les elements */
+    }
+    #first_line, #second_line
+    {
+        flex-direction: column; /* met les element en colonne donc les uns en dessous des autres */
+        align-items: center; /* centre les element */
+    }
+    .location_box
+    {
+        width: 80%; /* prend 80% de la largeur possible */
+    }
+    .location_box h3
+    {
+        font-size: 20px; /* agrandi les titres */
+        padding-left: 10px; /* decale le titre vers la gauche */
+    }
+
+    .location_box p
+    {
+        font-size: 16px; /* agrandi le p */
+        margin: 0px; /* rapproche p des etoiles */
+    }
+    .text_location
+    {
+        padding: 0px 0px 10px 10px; /* permet de centrer les element etoiles et p avec titre */
+    }
+
+
+    /* Troisieme section de la page version smartphone */
+
+    .activity
+    {
+        margin-top: 2em; /* rapproche la section avec celle du haut donc remonte aussi */
+    }
+    .activity h2
+    {
+        padding-left: 1.5em; /* decale vers la gauche */
+    }
+    #activity_container
+    {
+        flex-direction: column; /* met les element les uns en dessous des autres sur deux colonne */
+    }
+    .activity_box
+    {
+        flex-direction: column; /* permet de mettre tous les element les uns en dessous des autre sur une colonne */
+        width: 100%; /* prend toute la largeur possible */
+        align-items: center; /* centre les element au milieu */
+    }
+    #vieux_port_box, #parc_national_box
+    {
+        width: 80%; /* 80% de la largeur possible */
+        margin-top: 2em; /* met de l'espace en haut et en bas par rapport aux element autour */
+        margin-bottom: 2em;
+    }
+    #first_column, #second_column
+    {
+        width: 80%; /* prend 80% de la taille possible */
+        margin: 0px; /* centre les element */
+    }
+    #activity_container img
+    {
+        height: 220px; /* hauteur de 220px pour que chaque image soit a la meme taille */
+    }
+    #fort_pomegues_box a
+    {
+        font-size: 2px; /* diminue un peu la taille pour etre pareil que les autres */
+    }
+
+    /* Pied de page version smartphone */
+
+    footer
+    {
+        flex-direction: column; /* met les elements (boites) les uns en dessous des autres */
+    }
+    .footer_box
+    {
+        width: 100%; /* prend toute la largeur possible */
+    }
+}
