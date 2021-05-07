@@ -3,10 +3,15 @@ body /* corps de la page avec la largeur, les marges et les polices de la page *
     font-family: 'Raleway', serif; /* police de la page */
     width: auto; /* largeur auto pour que la page soit responsive sinon sans delicat pour l_etre */
     margin:auto;
-    margin-left: 10px; /* marge special pour le cote gauche de la page */
 }
 
 /* Header */
+
+header
+{
+    margin-left: 30px;
+    margin-right: 30px;
+}
 
 /* Partie haute du header*/ 
 
@@ -97,6 +102,12 @@ h1
 
 /*Premiere section de la page*/
 
+#first_section
+{
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
 /* Partie des filtres de la section */
 
 #filter_container
@@ -180,6 +191,8 @@ h1
 #second_section
 {
     display: flex; /* aligner hebergement et populaire */
+    margin-left: 30px;
+    margin-right: 30px;
 }
 
 /* Partie hebergements de la section */
@@ -344,7 +357,8 @@ aside p
     display: flex; /* met les images en ligne avec le titre */
     flex-direction: column; /* place les images en dessous du titre */
     margin-top: 4em; /* met une marge avec la section du haut */
-    
+    margin-left: 30px;
+    margin-right: 30px;
 }
 #activity_container
 {
@@ -636,7 +650,11 @@ footer h3
 @media screen and (max-width:767px) {
 
     /* Header version smartphone */
-
+    header
+    {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
     /* Partie haute du header version smartphone */
 
     #top_header
@@ -658,6 +676,7 @@ footer h3
     {
         width: 100%; /* permet a hebergement et activites de prendre toute la largeur */
         margin-top: 40px; /* permet de mettre de l'espace avec le logo et s'inscrire combiner avec display_block */
+        margin-left: 20px;
     }
    
     nav a
@@ -740,6 +759,8 @@ footer h3
     #second_section
     {
         flex-direction: column-reverse; /* permet de mettre en colonne inverser populaire et hebergement */
+        margin-left: 0px;
+        margin-right: 0px;
     }
 
     /* Partie populaire de la section version smartphone */ 
@@ -782,6 +803,10 @@ footer h3
         background-color: initial; /* met le fond en blanc car couleur d'origine */
         padding: 0px; /* centre les elements */
     }
+    .location h2
+    {
+        margin-left: 20px;
+    }
     #first_line, #second_line
     {
         flex-direction: column; /* met les element en colonne donc les uns en dessous des autres */
@@ -806,6 +831,10 @@ footer h3
     {
         padding: 0px 0px 10px 10px; /* permet de centrer les element etoiles et p avec titre */
     }
+    #show_more
+    {
+        margin-left: 20px;
+    }
 
 
     /* Troisieme section de la page version smartphone */
@@ -813,6 +842,8 @@ footer h3
     .activity
     {
         margin-top: 2em; /* rapproche la section avec celle du haut donc remonte aussi */
+        margin-left: 0px;
+        margin-right: 0px;
     }
     .activity h2
     {
